@@ -1,0 +1,11 @@
+{
+  "provider": {
+    "google": {
+      "options": {
+        "apiKey": "{env:TORONTO}"
+      }
+    }
+  },
+  "model": "google/gemini-2.5-pro",
+  "smallModel": "google/gemini-2.5-flash"
+}

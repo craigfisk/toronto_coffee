@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toronto Coffee Shops Map</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; }
+    #sidebar { width: 350px; overflow-y: auto; border-right: 1px solid #ccc; padding: 1rem; box-sizing: border-box; }
+    #map { flex-grow: 1; height: 100%; }
+    .shop-item:hover { background: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Toronto Coffee Notes</h2>
+    <div id="shop-list"></div>
+  </div>
+  <div id="map"></div>
+
+  <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("key","AQ.Ab8RN6LbA-DAcFw4onjs6h-7pkcs2CWCO7x-IgXYnSQL63eeCA");e.set("v","weekly");e.set("callback","initMap");for(let k of r)e.set(k,p[k]);a.src=`https://maps.googleapis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>n(new Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?fn:d[l]=(fn,...n)=>r.has(fn)?fn(...n):u().then(()=>d[l](fn,...n))})({
+      key: "AQ.Ab8RN6LbA-DAcFw4onjs6h-7pkcs2CWCO7x-IgXYnSQL63eeCA",
+      v: "weekly"
+    });
+  </script>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
