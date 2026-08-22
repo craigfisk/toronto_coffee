@@ -13,7 +13,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "kava-coffee-house",
     name: "Kava Coffee House",
-    intersection: "100 Howard St",
+    intersection: "100 Howard St, Toronto, ON M4X 1K1, Canada",
     lat: 43.6713994,
     lng: -79.3714777,
     wifi: true,
@@ -22,16 +22,16 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "mofer-coffee",
     name: "Mofer Coffee",
-    intersection: "55 University Ave #3",
-    lat: 43.6532,
-    lng: -79.3832,
+    intersection: "55 University Ave #3, Toronto, ON M5J 2H7, Canada",
+    lat: 43.6467723,
+    lng: -79.3838794,
     wifi: true,
     notes: "2025-8-23 on University down from Queen. Extra cortado for spilling half of the first one. WC same floor. Wifi. Longtable good for 6-7 person Mob Programming. Window counters. Helpful barista."
   },
   {
     id: "issho",
     name: "Issho",
-    intersection: "583 Gerrard St E",
+    intersection: "583 Gerrard St E, Toronto, ON M4M 1Y2, Canada",
     lat: 43.6654204,
     lng: -79.3522456,
     wifi: false,
@@ -40,7 +40,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "remarkable-bean",
     name: "Remarkable Bean",
-    intersection: "1103 Queen St E",
+    intersection: "1103 Queen St E, Toronto, ON M4M 1K7, Canada",
     lat: 43.66193,
     lng: -79.3356945,
     wifi: true,
@@ -49,7 +49,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "black-canary",
     name: "Black Canary",
-    intersection: "900 Kingston Rd",
+    intersection: "900 Kingston Rd, Toronto, ON M4E 1S5, Canada",
     lat: 43.6804179,
     lng: -79.2897047,
     wifi: true,
@@ -58,7 +58,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "poured-coffee",
     name: "Poured Coffee",
-    intersection: "2165 Danforth Ave",
+    intersection: "2165 Danforth Ave, East York, ON M4C 1K4, Canada",
     lat: 43.6860721,
     lng: -79.3104308,
     wifi: true,
@@ -67,7 +67,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "doapen-coffee-greek-town",
     name: "Doapen Coffee @Greek Town",
-    intersection: "850 Carlaw Ave",
+    intersection: "850 Carlaw Ave, Toronto, ON M4K 3L3, Canada",
     lat: 43.6805163,
     lng: -79.3483032,
     wifi: false,
@@ -76,16 +76,16 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "oliver-coffee-bar",
     name: "Oliver Coffee Bar",
-    intersection: "852 Pape Ave Unit 3",
-    lat: 43.6532,
-    lng: -79.3832,
+    intersection: "852 Pape Ave Unit 3, East York, ON M4K 3T6, Canada",
+    lat: 43.6838637,
+    lng: -79.3469027,
     wifi: false,
     notes: "2025-8-12 wifi broken, wouldn't reboot router (music works), WC downstairs, mediocre cortado, humming barista, country music. Went here in October 2024 and it was slightly better."
   },
   {
     id: "dark-horse-espresso",
     name: "Dark Horse Espresso",
-    intersection: "630 Queen St E",
+    intersection: "630 Queen St E, Toronto, ON M4M 1G3, Canada",
     lat: 43.658461,
     lng: -79.3526646,
     wifi: false,
@@ -94,7 +94,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "alice-marie",
     name: "Alice Marie",
-    intersection: "807 Gerrard St E",
+    intersection: "807 Gerrard St E, Toronto, ON M4M 1Y5, Canada",
     lat: 43.6667558,
     lng: -79.3456178,
     wifi: true,
@@ -103,7 +103,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "coffee-all-that-jazz",
     name: "Coffee & All That Jazz",
-    intersection: "72 Howard Park Ave",
+    intersection: "72 Howard Park Ave, Toronto, ON M6R 1V7, Canada",
     lat: 43.65152,
     lng: -79.45159,
     wifi: false,
@@ -112,7 +112,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "bevy",
     name: "Bevy",
-    intersection: "738 Dundas St E",
+    intersection: "738 Dundas St E, Toronto, ON M5A 2C3, Canada",
     lat: 43.6615685,
     lng: -79.357144,
     wifi: false,
@@ -121,7 +121,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "second-cup-cafe",
     name: "Second Cup Cafe",
-    intersection: "355 Danforth Ave",
+    intersection: "355 Danforth Ave, Toronto, ON M4K 1N7, Canada",
     lat: 43.6772272,
     lng: -79.3529021,
     wifi: false,
@@ -130,16 +130,16 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "sumach-espresso",
     name: "Sumach Espresso",
-    intersection: "118 Sumach St #2",
-    lat: 43.6532,
-    lng: -79.3832,
+    intersection: "118 Sumach St #2, Toronto, ON M5A 3J9, Canada",
+    lat: 43.6580063,
+    lng: -79.3596884,
     wifi: false,
     notes: "ok, ground floor WC, out of regular blueberry muffins, ok cortado. I wouldn't go back. Uninteresting clientele and poor music."
   },
   {
     id: "moss-park-espresso",
     name: "Moss Park Espresso",
-    intersection: "185 Queen St E",
+    intersection: "185 Queen St E, Toronto, ON M5A 1S2, Canada",
     lat: 43.65393,
     lng: -79.37142,
     wifi: false,
@@ -148,7 +148,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "nana-s-creperie",
     name: "Nana's Creperie",
-    intersection: "1917 Queen St E",
+    intersection: "1917 Queen St E, Toronto, ON M4L 1H3, Canada",
     lat: 43.66889,
     lng: -79.30419,
     wifi: false,
@@ -157,7 +157,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "balzac-s",
     name: "Balzac's",
-    intersection: "1 Trinity St",
+    intersection: "1 Trinity St, Toronto, ON M5A 3C4, Canada",
     lat: 43.64975,
     lng: -79.35913,
     wifi: true,
@@ -166,7 +166,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "jetfuel-coffee-shop",
     name: "JetFuel Coffee Shop",
-    intersection: "519 Parliament St",
+    intersection: "519 Parliament St, Toronto, ON M4X 1P3, Canada",
     lat: 43.665277,
     lng: -79.3682133,
     wifi: true,
@@ -175,7 +175,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "rooster-coffee-house",
     name: "Rooster Coffee House",
-    intersection: "479 Broadview Ave",
+    intersection: "479 Broadview Ave, Toronto, ON M4K 2N4, Canada",
     lat: 43.6691616,
     lng: -79.352812,
     wifi: true,
@@ -184,7 +184,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "riverdale-perk-cafe",
     name: "Riverdale Perk Cafe",
-    intersection: "633 Logan Avenue",
+    intersection: "633 Logan Avenue, Toronto, ON M4K 3C4, Canada",
     lat: 43.6703536,
     lng: -79.3463627,
     wifi: false,
@@ -193,7 +193,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "dineen-outpost",
     name: "Dineen Outpost",
-    intersection: "1042 Gerrard St E",
+    intersection: "1042 Gerrard St E, Toronto, ON M4M 1Z5, Canada",
     lat: 43.6690981,
     lng: -79.3367999,
     wifi: true,
@@ -202,16 +202,16 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "hailed-coffee",
     name: "Hailed Coffee",
-    intersection: "801 Gerrard St E",
-    lat: 43.6669075,
-    lng: -79.3454403,
+    intersection: "801 Gerrard St E, Toronto, ON M4M 1Y5, Canada",
+    lat: 43.6669232,
+    lng: -79.3453895,
     wifi: false,
     notes: "- on Gerrard near Logan (ok cortado; cheese scone) no wifi. - 2024/10/13 (Sunday) - best (?) cortado.a"
   },
   {
     id: "mercury-espresso",
     name: "Mercury Espresso",
-    intersection: "915 Queen St E",
+    intersection: "915 Queen St E, Toronto, ON M4M 1J4, Canada",
     lat: 43.660667,
     lng: -79.3413718,
     wifi: true,
@@ -220,7 +220,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "the-schmooz",
     name: "The Schmooz",
-    intersection: "590 Pape Ave",
+    intersection: "590 Pape Ave, Toronto, ON M4K 3R8, Canada",
     lat: 43.6751891,
     lng: -79.3435646,
     wifi: true,
@@ -229,7 +229,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "ideal-coffee-wine",
     name: "Ideal Coffee & Wine",
-    intersection: "162 Ossington Ave",
+    intersection: "162 Ossington Ave, Toronto, ON M6J 2Z7, Canada",
     lat: 43.6478667,
     lng: -79.4204274,
     wifi: false,
@@ -238,16 +238,16 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "oliver-coffee-bar",
     name: "Oliver Coffee Bar",
-    intersection: "852 Pape Ave Unit 3",
-    lat: 43.6532,
-    lng: -79.3832,
+    intersection: "852 Pape Ave Unit 3, East York, ON M4K 3T6, Canada",
+    lat: 43.6838637,
+    lng: -79.3469027,
     wifi: false,
     notes: "on Fulton at Pape. Ok flat white. - 2024/10/20 - 10/21"
   },
   {
     id: "la-gloria-mexican-coffee",
     name: "La gloria Mexican Coffee",
-    intersection: "453 Parliament St",
+    intersection: "453 Parliament St, Toronto, ON M5A 3A3, Canada",
     lat: 43.66362,
     lng: -79.36737,
     wifi: false,
@@ -256,7 +256,7 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "supernova",
     name: "Supernova",
-    intersection: "897 Broadview Ave",
+    intersection: "897 Broadview Ave, Toronto, ON M4K 2P9, Canada",
     lat: 43.6808633,
     lng: -79.3574494,
     wifi: false,
@@ -265,10 +265,10 @@ export const coffeeShops: CoffeeShop[] = [
   {
     id: "vlad-s-bakery",
     name: "Vlad's bakery",
-    intersection: "713 Danforth Ave",
+    intersection: "713 Danforth Ave, Toronto, ON M4J 1L2, Canada",
     lat: 43.679072,
     lng: -79.3434019,
     wifi: false,
-    notes: "Danforth south side just past Pape Ave. Books ---------------------------------- no software; bought 2 books -"
+    notes: "Danforth south side just past Pape Ave."
   },
 ];

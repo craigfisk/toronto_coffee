@@ -1,26 +1,19 @@
 import { coffeeShops } from './coffeeshops.js';
 let map;
 let markers = [];
-async function initMap() {
-    const { Map } = await google.maps.importLibrary("maps");
-    const { Marker } = await google.maps.importLibrary("marker");
-    const torontoCenter = { lat: 43.6532, lng: -79.3832 };
-    map = new Map(document.getElementById("map"), {
-        zoom: 13,
-        center: torontoCenter,
-        mapId: "TORONTO_COFFEE_MAP"
-    });
+function initMap() {
+    const torontoCenter = [43.6532, -79.3832];
+    map = L.map('map').setView(torontoCenter, 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    renderMarkers();
     renderShopList();
-    renderMarkers(Marker);
 }
-window.initMap = initMap;
-function renderMarkers(MarkerClass) {
+function renderMarkers() {
     coffeeShops.forEach((shop) => {
-        const marker = new MarkerClass({
-            position: { lat: shop.lat, lng: shop.lng },
-            map: map,
-            title: shop.name,
-        });
+        const marker = L.marker([shop.lat, shop.lng], { title: shop.name }).addTo(map);
         const infoContent = `
       <div style="max-width: 200px; font-family: sans-serif;">
         <h3 style="margin: 0 0 8px 0;">${shop.name}</h3>
@@ -29,12 +22,7 @@ function renderMarkers(MarkerClass) {
         <p style="margin: 0;">${shop.notes}</p>
       </div>
     `;
-        const infoWindow = new google.maps.InfoWindow({
-            content: infoContent,
-        });
-        marker.addListener("click", () => {
-            infoWindow.open(map, marker);
-        });
+        marker.bindPopup(infoContent);
         markers.push(marker);
     });
 }
@@ -51,14 +39,15 @@ function renderShopList() {
       <div style="font-size: 0.9em; color: #555;">${shop.intersection}</div>
     `;
         div.addEventListener("click", () => {
-            map.setCenter({ lat: shop.lat, lng: shop.lng });
-            map.setZoom(16);
+            map.setView([shop.lat, shop.lng], 16);
             const marker = markers[index];
             if (marker) {
-                google.maps.event.trigger(marker, "click");
+                marker.openPopup();
             }
         });
         listContainer.appendChild(div);
     });
 }
+// Initialize map on document load
+document.addEventListener('DOMContentLoaded', initMap);
 //# sourceMappingURL=app.js.map

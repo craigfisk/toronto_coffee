@@ -2,28 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Toronto Coffee Shops Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toronto Coffee Map</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
   <style>
-    body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; }
-    #sidebar { width: 350px; overflow-y: auto; border-right: 1px solid #ccc; padding: 1rem; box-sizing: border-box; }
-    #map { flex-grow: 1; height: 100%; }
-    .shop-item:hover { background: #f9f9f9; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+    #sidebar {
+      width: 300px;
+      overflow-y: auto;
+      background: #f8f9fa;
+      border-right: 1px solid #ddd;
+    }
+    #map {
+      flex: 1;
+      height: 100%;
+    }
+    .shop-item:hover {
+      background-color: #e9ecef;
+    }
   </style>
+  <script type="module" src="./src/app.js"></script>
 </head>
 <body>
-  <div id="sidebar">
-    <h2>Toronto Coffee Notes</h2>
-    <div id="shop-list"></div>
+  <div class="container">
+    <div id="sidebar">
+      <div style="padding: 16px; border-bottom: 1px solid #ddd; background: white; position: sticky; top: 0;">
+        <h2 style="margin: 0;">Toronto Coffee Shops</h2>
+      </div>
+      <div id="shop-list"></div>
+    </div>
+    <div id="map"></div>
   </div>
-  <div id="map"></div>
-
-  <script>
-    const GOOGLE_MAPS_API_KEY = 'AIzaSyCnyvhDO7bNHRCAb6aMMGkNe0towRnxSAo';
-    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("key",GOOGLE_MAPS_API_KEY);e.set("v","weekly");e.set("callback","initMap");for(let k of r)e.set(k,p[k]);a.src=`https://maps.googleapis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>n(new Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?fn:d[l]=(fn,...n)=>r.has(fn)?fn(...n):u().then(()=>d[l](fn,...n))})({
-      key: GOOGLE_MAPS_API_KEY,
-      v: "weekly"
-    });
-  </script>
-  <script type="module" src="./src/app.js"></script>
 </body>
 </html>

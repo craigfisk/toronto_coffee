@@ -1,21 +1,33 @@
 {
   "name": "toronto_coffee",
+  "markdown.preview.allowScripts": false,
   "version": "1.0.0",
   "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "npx serve . & tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "keywords": [],
   "dependencies": {
+    "@astrojs/vue": "^7.0.2",
     "@google/genai": "^2.17.1",
     "@googlemaps/google-maps-services-js": "^3.4.2",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/google.maps": "^3.65.5",
+    "astro": "^7.2.4",
     "csv-parser": "^3.2.1",
     "dotenv": "^17.4.2",
-    "typescript": "^7.0.2"
+    "leaflet": "^1.9.4",
+    "node": "^24.19.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.22"
   }
 }

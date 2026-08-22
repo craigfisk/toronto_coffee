@@ -1,0 +1,21 @@
+npm notice run toronto_coffee@1.0.0 npx
+npm notice run 'serve' . -p 8000
+ INFO  Accepting connections at http://localhost:8000
+ HTTP  8/22/2026 5:55:43 PM ::1 GET /
+ HTTP  8/22/2026 5:55:43 PM ::1 Returned 200 in 74 ms
+ HTTP  8/22/2026 5:58:35 PM ::1 GET /
+ HTTP  8/22/2026 5:58:35 PM ::1 Returned 200 in 5 ms
+ HTTP  8/22/2026 5:58:35 PM ::1 GET /src/app.js
+ HTTP  8/22/2026 5:58:35 PM ::1 Returned 200 in 3 ms
+ HTTP  8/22/2026 5:58:35 PM ::1 GET /src/coffeeshops.js
+ HTTP  8/22/2026 5:58:35 PM ::1 Returned 200 in 2 ms
+ HTTP  8/22/2026 5:58:35 PM ::1 GET /favicon.ico
+ HTTP  8/22/2026 5:58:35 PM ::1 Returned 404 in 2 ms
+ HTTP  8/22/2026 6:00:02 PM ::1 GET /
+ HTTP  8/22/2026 6:00:02 PM ::1 Returned 200 in 7 ms
+ HTTP  8/22/2026 6:00:35 PM ::1 GET /
+ HTTP  8/22/2026 6:00:35 PM ::1 Returned 200 in 4 ms
+ HTTP  8/22/2026 6:00:35 PM ::1 GET /src/app.js
+ HTTP  8/22/2026 6:00:35 PM ::1 Returned 200 in 2 ms
+ HTTP  8/22/2026 6:00:35 PM ::1 GET /src/coffeeshops.js
+ HTTP  8/22/2026 6:00:35 PM ::1 Returned 304 in 7 ms

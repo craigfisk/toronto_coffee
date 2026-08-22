@@ -1,33 +1,28 @@
 import { coffeeShops } from './coffeeshops.js';
 
-let map: google.maps.Map;
-let markers: google.maps.Marker[] = [];
+// Since we are using CDN, Leaflet is available on window.L
+declare const L: any;
 
-async function initMap(): Promise<void> {
-  const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
-  const { Marker } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
+let map: any;
+let markers: any[] = [];
 
-  const torontoCenter = { lat: 43.6532, lng: -79.3832 };
+function initMap(): void {
+  const torontoCenter: [number, number] = [43.6532, -79.3832];
   
-  map = new Map(document.getElementById("map") as HTMLElement, {
-    zoom: 13,
-    center: torontoCenter,
-    mapId: "TORONTO_COFFEE_MAP"
-  });
+  map = L.map('map').setView(torontoCenter, 13);
 
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  renderMarkers();
   renderShopList();
-  renderMarkers(Marker);
 }
 
-(window as any).initMap = initMap;
-
-function renderMarkers(MarkerClass: typeof google.maps.Marker): void {
+function renderMarkers(): void {
   coffeeShops.forEach((shop) => {
-    const marker = new MarkerClass({
-      position: { lat: shop.lat, lng: shop.lng },
-      map: map,
-      title: shop.name,
-    });
+    const marker = L.marker([shop.lat, shop.lng], { title: shop.name }).addTo(map);
 
     const infoContent = `
       <div style="max-width: 200px; font-family: sans-serif;">
@@ -38,14 +33,7 @@ function renderMarkers(MarkerClass: typeof google.maps.Marker): void {
       </div>
     `;
 
-    const infoWindow = new google.maps.InfoWindow({
-      content: infoContent,
-    });
-
-    marker.addListener("click", () => {
-      infoWindow.open(map, marker);
-    });
-
+    marker.bindPopup(infoContent);
     markers.push(marker);
   });
 }
@@ -63,13 +51,15 @@ function renderShopList(): void {
       <div style="font-size: 0.9em; color: #555;">${shop.intersection}</div>
     `;
     div.addEventListener("click", () => {
-      map.setCenter({ lat: shop.lat, lng: shop.lng });
-      map.setZoom(16);
+      map.setView([shop.lat, shop.lng], 16);
       const marker = markers[index];
       if (marker) {
-        google.maps.event.trigger(marker, "click");
+        marker.openPopup();
       }
     });
     listContainer.appendChild(div);
   });
 }
+
+// Initialize map on document load
+document.addEventListener('DOMContentLoaded', initMap);
