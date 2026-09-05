@@ -19,3 +19,5 @@ npm notice run 'serve' . -p 8000
  HTTP  8/22/2026 6:00:35 PM ::1 Returned 200 in 2 ms
  HTTP  8/22/2026 6:00:35 PM ::1 GET /src/coffeeshops.js
  HTTP  8/22/2026 6:00:35 PM ::1 Returned 304 in 7 ms
+
+ INFO  Gracefully shutting down. Please wait...
