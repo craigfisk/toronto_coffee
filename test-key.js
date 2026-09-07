@@ -1,11 +1,8 @@
 import 'dotenv/config';
 import { GoogleGenAI } from '@google/genai';
 
-// If using GEMINI_API_KEY in ~/.bashrc, no constructor options are needed.
-const ai = new GoogleGenAI({}); 
-
-// If keeping the variable name as TORONTO, initialize like this:
-// const ai = new GoogleGenAI({ apiKey: process.env.TORONTO });
+// Initialize with the TORONTO_COFFEE_API environment variable
+const ai = new GoogleGenAI({ apiKey: process.env.TORONTO_COFFEE_API });
 
 async function run() {
   const response = await ai.models.generateContent({
